@@ -1,0 +1,468 @@
+body {
+  height: 100%;
+  width: 100%; /* Use width: 100% to take up the full width of the viewport */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 5000;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.navigationbar nav ul{
+  margin-left: 26px;
+}
+
+header.sticky{
+  background-color: rgba(18, 19, 18, 0.9);
+  height: 75px;
+}
+
+span:nth-child(1) {
+  top: 200px;
+  right: 90px;
+  left: initial;
+  opacity: 1;
+}
+
+span:nth-child(2) {
+  top: 50px;
+  right: 100px;
+  opacity: 1;
+}
+
+span:nth-child(3) {
+  top: 100px;
+  right: 80px;
+  opacity: 1;
+}
+
+span:nth-child(4) {
+  top: 200px;
+  right: 80px;
+  opacity: 1;
+}
+
+
+/* Container */
+.Mcontainer {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.BannerTitle, .PurpleBackground, .FooterContent div.IframeContainer1{
+  display: block;/*align horizontal*/
+  margin-left: auto;/*align horizontal*/
+  margin-right: auto;/*align horizontal*/
+}
+
+@media (max-width: 1920px) {
+  .Mcontainer{
+      width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation bar */
+#Logo{
+  width: 40px; 
+  height: 40px;
+  left:80px; 
+  top: 10px; 
+  position: absolute;
+}
+
+#Setting{
+  width: 40px; 
+  height: 40px;
+  left:1370px; 
+  top: 10px; 
+  position: relative;
+  border-radius: 50px;
+}
+
+#Profile{
+  width: 40px; 
+  height: 40px;
+  left: 1390px;  
+  top: 10px; 
+  position: relative;
+  border-radius: 50px;
+}
+
+.Name{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 13px; /* Adjust society word space (top) */
+  margin-left: 133px; /* Adjust society word space (left) */
+  font-weight: bold;
+  position: absolute;
+  color: white;
+}
+
+/* Banner */
+.MainBanner {
+  width: fit-content;
+  height: 1728px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: SlideDown 5s;
+}
+
+@keyframes SlideDown{
+  0%{
+    transform: translateY(-52%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+#BannerBackground {
+  width: fit-content;
+  height: 1728px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding: 0;
+  margin-bottom: 140px;
+  filter: brightness(55%); 
+}
+
+
+#BannerTitle {
+  color: ghostwhite;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  top: 200px; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the element within its parent */
+  text-shadow: 4px 4px 20px black;
+  animation: WordDown 3s forwards;
+  opacity: 0;
+  animation-delay: 3.5s;
+}
+
+@keyframes WordDown{
+  0%{
+    transform: translateY(-100%);
+  } 100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Event Post Section */
+.PurpleBackground{
+  top: -80px;
+  padding: 0;
+  margin: 0;
+  width: 100%; 
+  height: 1400px; 
+  position: relative;
+  object-fit: cover;
+  background: linear-gradient(90deg,#39395a 100%, #3C3C5F 50%, #39395b 100%);
+}
+
+#TotalEvent, #TotalCountry, #TotalView{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  position: absolute;
+  width: 376px;
+  height: 175px;
+  top: 50px;
+}
+
+#TotalEvent {
+  left: 15%;
+}
+
+#TotalCountry {
+  left: 38%;
+}
+
+#TotalView {
+  left: 60%;
+}
+
+/* Search Bar For Event Post Section*/
+.SearchBar{
+  width: calc(100% - 530px); 
+  height: auto;
+  top: 300px;
+  margin: 0 auto; /* Center the element within its parent */
+  margin-left: 280px;
+  position: absolute;
+}
+
+/* Country Search Bar */
+#CountrySelect{
+  width: 228.5px; 
+  height: 65px; 
+  position: absolute; 
+  background: ghostwhite; 
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px; 
+  border: 2px #8E8E8E solid;
+}
+
+#CountryImage{
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+}
+
+#CountrySelect[name = "Country"]{
+  padding-left: 50px; 
+  color: black; 
+  font-size: 21px; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* Search Text Bar */
+#SearchSelect{
+  width: 515px; 
+  height: 65px; 
+  left: 230px; 
+  top: 0px; 
+  position: absolute;
+  background: ghostwhite; 
+  border: 2px #8E8E8E solid;
+  color: rgba(0, 0, 0, 0.51); 
+  font-size: 20px; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400; 
+  padding-left: 70px;
+}
+
+#SearchImage{
+  width: 38px; 
+  height: 38px; 
+  left: 240px; 
+  top: 15px; 
+  position: absolute;
+  z-index: 2;
+}
+
+/* Category Search Bar */
+#CategorySelect{
+  width: 235px; 
+  height: 65px; 
+  left: 746px; 
+  top: 0px; 
+  position: absolute; 
+  background: ghostwhite; 
+  border-bottom-right-radius: 10px; 
+  border-top-right-radius: 10px; 
+  border: 2px #8E8E8E solid;
+  padding-left: 60px;
+  color: black; 
+  font-size: 21px; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400; 
+}
+
+#CategoryImage{
+  width: 38px; 
+  height: 38px; 
+  left: 765px; 
+  top: 16px; 
+  position: absolute;
+  z-index: 2;
+}
+
+/* Event Mini Menu - eventpost.htm */
+.IframeContainer1{
+  top: 450px;
+  height: 700px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Four columns with equal width */
+  grid-template-rows: repeat(3, 1fr); /* Three rows with equal height */
+  gap: 50px 50px; /* Spacing between items */
+  padding: 35px;
+  overflow-x: hidden;
+  padding-left: 80px;
+}
+
+/* Footer */
+.Footer {
+  width: 100%;
+  height: 400px;
+  margin-top: 1400px;
+  position: absolute;
+  background-color: #39395b;
+  z-index: 3;
+}
+
+.FooterContent{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  margin-top: 50px;
+  padding-left: 50px;
+}
+
+/* Main Content Control Footer */
+.Content1{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 110px;
+}
+
+.Content1 p{
+  margin: 20px; /*Word-Spacing*/
+}
+
+.Content2{
+  margin: 5px 10%;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 245px;
+}
+  
+.Content3{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: -35px;
+}
+
+.Content3 a{
+  text-decoration: none;
+}
+
+.Footer h1{
+  color: rgb(255, 255, 255); 
+  font-size: 30px; 
+  font-family: Roboto; 
+  font-weight: bold; 
+  text-align: center;
+}
+
+.Footer h1 a{
+  text-decoration: none;
+}
+
+#Line1{
+  width: 150px; /*Size of the line*/
+  border: 2px solid rgb(255, 255, 255);
+  margin: 0;
+  margin-left: 25px;
+  border-radius: 30px;
+}
+
+#JFFooter, #SSFooter, #EFooter, #AboutUs{
+  width: 200px; /*Size of the word*/
+  margin-top: 20px;
+  margin-right: 62px;
+  margin-left: -38px;
+}
+
+.Footer p, #TextLink{
+  color: rgb(255, 255, 255); 
+  font-size: 25px; 
+  font-family: Roboto;
+  text-align: center;
+}
+
+/* 4 Logo Images */
+#Twitter, #Facebook, #Insta, #Youtube{
+  width: 70px; 
+  height: 70px;
+  margin-left: 45px;
+  margin-right: -45px;
+}
+
+.Content4{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: -39px;
+}
+
+/* Footer Slogan */
+#FooterSlogan{
+  width: 380px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  color: rgb(255, 255, 255); 
+  font-size: 36px; 
+  font-family: Roboto; 
+  font-weight: bold; 
+  line-height: 1.1;
+}
+
+.Content4 h3 p {
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #e100ff, #839ccf);
+  animation: bouncey 2s infinite;
+  animation-delay: 5s;
+}
+
+@keyframes bouncey {
+  0%, 20%, 50%{
+    transform: translateY(0); /* No vertical movement at these points */
+  }
+  40% {
+    transform: translateY(-6px); /* Bounce up at 40% */
+  }
+  60% {
+    transform: translateY(-3px); /* Bounce up at 60% */
+  }
+}
+
+#Line2 {
+  width: 1200px; /*Size of the line*/
+  margin-top: 20px;
+  height: 1px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color:white;
+  margin-left: -50px;
+}
+
+#TermsOfUse, #PrivacyPolicy{ 
+  color: white; 
+  font-size: 25px; 
+  font-family: Roboto; 
+  font-weight: 400;
+  width: 200px;
+  font-weight: bold;
+  margin-top: 10px;
+}

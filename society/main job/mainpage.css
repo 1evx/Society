@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fragment+Mono&family=Gamja+Flower&family=Montserrat:wght@400;700&family=Open+Sans&family=Oswald:wght@700&family=Poor+Story&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fragment+Mono&family=Gamja+Flower&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;800&family=Oswald:wght@700&family=Poor+Story&family=Ubuntu&display=swap');
+
+::-webkit-scrollbar{
+    width: 10px;
+    /* background-color: #cc3b6b; */
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(105, 103, 103); 
+  }
+
+body {
+    height: 100%;
+    width: 100%; /* Use width: 100% to take up the full width of the viewport */
+    margin: 0;
+    padding: 0;
+    background-color: #1B1B1B;
+    background-image: none;
+}
+@keyframes floater {
+    0%{transform: translateY(-2%);transition: ease 0.5s;}
+    50%{transform: translateY(2%);transition: ease 0.5s;}
+  }
+@keyframes floater1 {
+    0%{transform: translateY(-3%);transition: ease 0.5s;}
+    50%{transform: translateY(3%);transition: ease 0.5s;}
+}
+@keyframes floater2 {
+    0%{transform: translateY(-5%);transition: ease 0.5s;}
+    50%{transform: translateY(5%);transition: ease 0.5s;}
+}
+
+
+
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 5000;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+header.sticky{
+    background-color: rgba(18, 19, 18, 0.9);
+    height: 75px;
+}
+
+div.JobFinder, div.SkillSync, div.Event, div.Footer, .FooterContent{
+    display: block;/*align horizontal*/
+    margin-left: auto;/*align horizontal*/
+    margin-right: auto;/*align horizontal*/
+}
+
+
+/* Navigation Bar */
+#Logo{
+    width: 40px; 
+    height: 40px;
+    left:80px; 
+    top: 10px; 
+    position: absolute;
+}
+
+#Setting{
+    width: 40px; 
+    height: 40px;
+    left:1370px; 
+    top: 10px; 
+    position: relative;
+    border-radius: 50px;
+}
+
+#Profile{
+    width: 40px; 
+    height: 40px;
+    left: 1390px;  
+    top: 10px; 
+    position: relative;
+    border-radius: 50px;
+}
+
+.Bar{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+.Name{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 13px; /* Adjust society word space (top) */
+    margin-left: 133px; /* Adjust society word space (left) */
+    font-weight: bold;
+    position: absolute;
+}
+
+.Bar ul{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 250px; /* Adjust space between logo and header text */
+    margin-top: 20px;
+    position: absolute;
+}
+
+.Bar li{
+    margin-right: 40px; /* Adjust spacing between items as needed */
+    transition: color 0.3s;
+    text-decoration: none;
+    display: inline;
+}
+
+.Bar a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.Bar a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+/* Purple Section Title */
+/* Purple Title Section */
+.LUYFBackground{
+    margin-top: -5px;
+    width: 100%;
+    /* background: linear-gradient(180deg, #A770EF 0%, #EC7AEA 50%, #FDB99B 90%); */
+    z-index: 1;
+}
+
+.LUYFBackground img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.ShapeYourFuture{
+    width: 100%;
+    padding: 100px 150px;
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+}
+
+
+.ShapeYourFuture h1{
+    text-align: center; 
+    color: black; 
+    font-size: 80px; 
+    font-family: Inter; 
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans';
+}
+
+
+/* 2 Button In Title */
+.Containerbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.Container1,
+.Container2{
+    margin: 20px 5%;
+}
+
+#SignUp,
+#SignIn{
+    width: 190px;
+    height: 60px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    font-size: 20px; 
+    /* font-family: Inter;  */
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+#SignUp:hover,
+#SignIn:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Black Background Section */
+.Blackground{
+    background: linear-gradient(#490328, #1B1B1B);
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    margin-top: -5px;
+}
+
+
+/* Job Finder */
+.JobFinder {
+    margin-top: 500px; 
+    height: 600px; /* Use viewport height instead of percentage */
+    width: 100%;
+    position: relative; /* Add position relative to act as a reference for absolutely positioned children */
+}
+
+.JobFinder img {
+    width: 100%; /* Set image width to 100% of its container */
+    height: 100%; /* Set image height to 100% of its container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    opacity: 0.70;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.JobFinder h1{
+    width: 693px; 
+    height: 141px; 
+    left: 280px; 
+    top: 60px; 
+    position: absolute; 
+    color: #F4A950; 
+    font-size: 70px; 
+    font-family: Inter; 
+    font-weight: 700; 
+}
+
+.JobFinder p{
+    width: 812px; 
+    height: 155px; 
+    left: 40px; 
+    top: 200px; 
+    position: absolute; 
+    text-align: center; 
+    color: #F4A950; 
+    font-size: 34px; 
+    font-family: Inter; 
+    font-weight: 700; 
+}
+
+#FindJob{
+    width: 400px; 
+    height: 90px; 
+    left: 250px; 
+    top: 410px; 
+    position: absolute; 
+    background: #F4A950; 
+    border-radius: 20px;
+    text-align: center; 
+    color: black; 
+    font-size: 25px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    transition: 0.2s;
+}
+.FindJobtext{
+    color: white;
+    font-family: "Gamja Flower";
+    font-size: 29px;
+}
+#FindJob:hover{
+    letter-spacing: 1px;
+}
+
+/* Skill Syncs */
+.SkillSync{
+    margin-top: 200px;
+}
+
+#SSBackground{
+    height: 953px;
+    position: absolute; 
+    opacity: 0.70; 
+    display: block; 
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.skillsyncbanner{
+    display: flex;
+    justify-content: center;
+}
+#PaintRoller{
+    width: 259px; 
+    height: 197px;
+    margin-left: -50px;
+    margin-top: -40px;
+}
+
+#SplashBanner{
+    width: 1044px; 
+    height: 405px; 
+}
+
+
+.SkillSyncfunction{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    align-items: end;
+}
+
+.SkillSyncfunctiontext1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.SkillSyncfunctiontext1 h1{
+    width: 750px;
+}
+
+.SkillSyncfunctiontext2{
+    display: flex;
+    flex-direction: column;
+}
+
+.SkillSyncfunctiontext1 h1{
+    line-height: 116px; 
+    color: #4AEDCF; 
+    font-size: 80px; 
+    font-family: Inter; 
+    font-weight: 700; 
+}
+
+#SSContent{
+    width: 750px;
+    height: 155px; 
+    text-align: center; 
+    color: #4AEDCF; 
+    font-size: 30px; 
+    font-family: Inter; 
+    font-weight: 700; 
+}
+
+.SkillSync hr{
+    width: 100%;
+    height: 0px; 
+    border: 2px white solid;
+    border-radius: 10px;
+}
+
+.functiontext{
+    width: 750px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Number Show Panner */
+#Courses,
+#Classes,
+#Students,
+#Teachers{
+    width: 100%; 
+    height: 175px;  
+    text-align: center; 
+    color: #4AEDCF; 
+    font-size: 50px; 
+    font-family: Inter; 
+    font-weight: bold; 
+    transition: 0.2s;
+}
+
+/* Event */
+.Event{
+    margin: 200px 10%;
+    display: flex;
+    position: relative;
+    height: 600px;
+}
+
+.Event .eventtext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20%;
+    height: 550px;
+    z-index: 5;
+}
+
+.eventtext div{
+    margin: 10px;
+}
+
+#SYA,
+#Econtent{
+    width: auto;
+    height: auto;
+    
+}
+#SYA h7{
+    font-size: 70px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(#6DC0E3, #C274F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+#Econtent p{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(#6DC0E3, #C274F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#JoinEvent{
+    width: 242px; 
+    height: 84px; 
+    background: linear-gradient(180deg, #70A7FA 0%, #8121FA 100%);
+    border-radius: 50px;
+    color: black; 
+    font-size: 35px; 
+    font-family: Inter; 
+    font-weight: bold; 
+    z-index: 2;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.eventimg{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    
+}
+
+.eventimg1,
+.eventimg2,
+.eventimg3{
+    z-index: 1;
+}
+
+.eventimg1,
+.eventimg3{
+    display: flex;
+    justify-content: end;
+}
+
+.eventimg1{
+    transform: translateY(-3%);
+    animation: floater1 5s infinite;
+    transition: ease 0.5s;
+}
+.eventimg2{
+    transform: translateY(-3%);
+    animation: floater1 3s infinite;
+    transition: ease 0.5s;
+}
+.eventimg3{
+    transform: translateY(-5%);
+    animation: floater2 7s infinite;
+    transition: ease 0.5s;
+}
+
+
+#Event1,
+#Event2,
+#Event3{
+    width: 256px; 
+    height: 189px; 
+    border-radius: 50px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+#Event1{
+    margin-right: 10%;
+}
+#Event2{
+    margin-left: 7%;
+}
+#Event3{
+    margin-right: 20%;
+}
+
+
+/* Ship */
+#Ship{
+    width: 337.21px; 
+    height: 284.23px; 
+    position: absolute; 
+    margin-left: 10%;
+    margin-top: -20px;
+    transform: translateY(-2%);
+    animation: floater 4s infinite;
+    transition: ease 0.5s;
+}
+
+/* Footer */
+.Footer {
+    height: 100%;
+    margin: 5%;
+    width: 100%;
+}
+
+.Footer .footerimg{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    background-position: 0 bottom;
+}
+
+.FooterContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+.Content1{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+
+.Content1 p{
+    margin: 10px;
+}
+
+.Content2{
+    margin: 5px 10%;
+    display: flex;
+    flex-direction: column;
+}
+    
+.Content3{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Content3 a{
+    text-decoration: none;
+}
+
+.Footer h1{
+    color: rgb(255, 255, 255); 
+    font-size: 30px; 
+    font-family: Roboto; 
+    font-weight: bold; 
+    text-align: center;
+}
+
+.Footer h1 a{
+    text-decoration: none;
+}
+
+#Line1{
+    border: 2px solid white;
+    margin: 0;
+    width: 150px;
+    margin-left: 15px;
+    border-radius: 30px;
+}
+
+#JFFooter, #SSFooter, #EFooter, #AboutUs{
+    width: 180px;
+}
+
+.Footer p, #TextLink{
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    font-family: Roboto;
+    font-weight: 400px;
+    text-align: center;
+}
+
+/* 4 Logo Images */
+#Twitter, #Facebook, #Insta, #Youtube{
+    width: 70px; 
+    height: 70px;
+    margin: 0 1%; 
+}
+
+.Content4{
+    display: flex;
+    flex-direction: column;
+    width: 330px; 
+}
+.Content4 .logoimg{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+/* Footer Slogan */
+#FooterSlogan{
+    width: 100%;  
+    text-align: center; 
+    color: rgb(255, 255, 255); 
+    font-size: 35px; 
+    font-family: Roboto; 
+    font-weight: bold; 
+    line-height: 45px;
+    text-justify: auto;
+}
+
+#Line2 {
+    width: 100%;
+    height: 1px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color:black;
+}
+
+#TermsOfUse, #PrivacyPolicy{ 
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    font-family: Roboto; 
+    font-weight: 400;
+    width: 200px;
+}
+
+@media only screen and (max-width: 1400px){
+    #PaintRoller{
+        width: 230px; 
+        height: 150px;
+        object-fit: contain;
+        margin-left: -60px;
+        margin-top: 1px;
+    }
+    
+    #SplashBanner{
+        width: 900px; 
+        height: 405px;
+        object-fit: contain; 
+    }
+    .Footer {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    .wave1{
+        background-size: 50% 180px;
+      }
+    .wave2,
+    .wave4{
+        background-size: 50% 130px;
+      }
+    .wave3{
+        background-size: 50% 230px;
+      }
+    .wave4{
+        margin-top: 5px;
+    }
+    .SkillSyncfunctiontext,
+    .functiontext{
+        width: 600px;
+    }
+    .SkillSyncfunctiontext1 h1{
+        width: 600px;
+        font-size: 60px;
+    }
+    
+    #SSContent{
+        width: 100%;
+    }
+    .SkillSyncfunction{
+        margin-top: -70px;
+
+    }
+    #Courses,
+    #Classes,
+    #Students,
+    #Teachers{
+        width: 100%; 
+        height: 150px;
+        font-size: 40px;   
+    }
+    #SSBackground{
+        height: 853px;
+    }
+    .Footer {
+        height: 430px;
+    }
+    #JFFooter, #SSFooter, #EFooter, #AboutUs{
+        width: 150px;
+
+    }
+    #Twitter, #Facebook, #Insta, #Youtube{
+        width: 50px; 
+        height: 50px; 
+    }
+    .Footer p, #TextLink{
+        font-size: 20px;
+    }
+    .Footer h1{ 
+        font-size: 25px;
+    }
+    
+    #Line1{
+        width: 80%;
+    }
+    #FooterSlogan{
+        font-size: 25px; 
+    }
+    .Footer{
+        height: 500px;
+    }
+    .Footer .footerimg{
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    #FooterSlogan{
+        font-size: 25px; 
+    }
+    .Footer{
+        height: 500px;
+    }
+    .Footer .footerimg{
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 1050px){
+    .Footer{
+        height: 500px;
+    }
+    .Footer .footerimg{
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1030px){
+    .Footer{
+        height: 480px;
+    }
+    .Footer .footerimg{
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+    }
+}

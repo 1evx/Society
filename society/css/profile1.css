@@ -1,0 +1,243 @@
+body {
+  background: linear-gradient(
+    135.43deg,
+    rgba(138, 135, 212, 1) 0%,
+    rgba(115, 103, 240, 1) 41.0590261220932%,
+    rgba(115, 103, 240, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  position: relative; 
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 5000;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+header.sticky{
+  background-color: rgba(18, 19, 18, 0.9);
+  height: 75px;
+}
+
+/* Container */
+.container{
+  display:flex;
+  margin: auto;
+  max-width: 1920px;
+  margin-top: 6%;
+  height: 87vh;
+  width: 70vw;
+  box-shadow: 4px 4px 10px;
+  margin-bottom: 6%;
+}
+
+main{
+  height: 700px;
+  width: 210vh;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; 
+  height: auto; 
+  display: flex;
+  margin-left: 18%;
+  margin-top: 10%;/* Add */
+}
+
+.logo-text {
+  display: flex;
+  margin-bottom: auto;
+  margin-top: 12%; 
+  margin-left: 4%;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Inter',sans-serif;
+}
+
+.white_box{
+  background-color: #f3ecece5;
+  flex: 0.38;
+  border: 1.5px solid black;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* Option Bar */
+.main-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 9%;
+}
+
+.n-content{
+  text-decoration: none;
+  color: black;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.n-content i {
+  height: 100%;
+  margin-right: 10%; /*Space with icon and word*/
+  margin-left: 13%;/*Anchor for center*/
+}
+
+.n-content:hover{
+  background-color: greenyellow;
+}
+
+.log-out{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  margin-top: 6.5%;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  width: 14.3%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 10px;
+  padding: 20px 57px;
+}
+
+.log-out:hover{
+  background-color:red;
+}
+
+.log-out i{
+  margin-right: 10px;
+}
+
+/* Content*/
+.light_box{
+  background-color:rgba(222, 222, 222, 0.7);
+  flex: 1.5;
+  border: 1px solid black;
+  overflow-y: auto;
+}
+
+.BannerBox{
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 0px 9px 0px 0px;
+  margin-bottom: 40px;
+}
+
+.BannerBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Profile{
+  width: 100px;
+  height: 100px;
+  margin-top: -75px;
+  margin-left: 20px;  
+  background-color: rgb(234, 234, 234);
+  border-radius: 100px;
+  z-index: 10001;
+  opacity: 0.75;
+  background-size: cover;
+}
+
+.Profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+  opacity: 0.9;
+  border: 2px solid black;
+}
+
+.AboveLeft{
+  width: 300px;
+  height: 65px;
+  margin-left: 130px;
+  margin-top: -7%;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  padding: 3px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+.font_size{
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 1px;
+}
+
+.AboveRight {
+  width: fit-content;
+  height: 50px;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: -8%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.AboveMarker{
+  margin-top: -8%;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.main-content-2{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-left: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about{
+  padding: 20px;
+  margin-top: 3%;
+}
+
+.h1-content{
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+}
+
+.h5-content{
+  font-weight: bolder;
+  font-size: 14px;
+  font-family: 'Inter',sans-serif;
+  margin-left: 20px;
+}
+
+.h5-content span{
+  font-weight: lighter;
+  font-size: 14px;
+  font-style: normal;
+  word-spacing: 2px;
+}
+

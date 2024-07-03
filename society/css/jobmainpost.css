@@ -1,0 +1,155 @@
+/* Job Post Main - jobdescription.htm */
+.JobDescriptionPost{
+    width: 823px; 
+    height: 930px; 
+    background: white;
+    border-radius: 20px;
+}
+
+.JobBanner{
+    width: 823px; 
+    height: 189px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute;
+    border-radius: 20px;
+    background: #E8E8E8; 
+    overflow: hidden; /* Ensure that the image doesn't overflow the div */
+}
+
+.JobBannerImg {
+    object-fit: cover; /* Make the image cover the entire container while maintaining aspect ratio */
+    width: 100%; /* Make sure the image takes up the entire width of the container */
+    height: 100%; /* Make sure the image takes up the entire height of the container */
+    position: absolute;
+}
+
+
+.JobProfile {
+    width: 167px;
+    height: 162px;
+    left: 34px;
+    top: 117px;
+    position: relative;
+    background: #D9D9D9;
+    border-radius: 95px;
+    overflow: hidden; /* Ensure that the image doesn't overflow the div */
+}
+
+.JobProfileImg {
+    object-fit: cover; /* Make the image cover the entire container while maintaining aspect ratio */
+    width: 100%; /* Make sure the image takes up the entire width of the container */
+    height: 100%; /* Make sure the image takes up the entire height of the container */
+    position: absolute;
+}
+
+.CompanyName{
+    left: 220px; 
+    top: 200px; 
+    position: absolute; 
+    color: black; 
+    font-size: 32px; 
+    font-family: Inter; 
+    font-weight: 700; 
+}
+
+.JobTitle{
+    left: 220px; 
+    top: 245px; 
+    position: absolute; 
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 700;
+}
+
+.UpdateTime2{
+    left: 53px; 
+    top: 293px; 
+    position: absolute; 
+    color: black; 
+    font-size: 14px; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+}
+
+#Save{
+    position: absolute; 
+    color: black; 
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: bold; 
+    width: 105px; 
+    height: 36px; 
+    left: 700px; 
+    top: 250px; 
+    background: #D3D3D3; 
+    border-radius: 20px;
+    border: 1px solid rgb(147, 147, 147);
+}
+
+#ApplyNow{
+    position: absolute; 
+    color: black; 
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: bold;
+    width: 105px; 
+    height: 36px; 
+    left: 700px; 
+    top: 200px; 
+    background: #88FD5F; 
+    border-radius: 20px;
+    border: 1px solid rgb(104, 230, 90);
+    cursor: pointer;
+}
+
+#Tag2{
+    left: 220px; 
+    top: 280px; 
+    position: absolute; 
+    color: black; 
+    font-size: 13px; 
+    font-family: Inter; 
+    font-weight: 400; 
+}
+
+#Tag2 img{
+    margin-right: 3px;
+    position: relative;
+    vertical-align: middle;
+}
+
+#JobDescriptions, #JobRequirements, #OtherTitle{
+    position: absolute; 
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    text-decoration: underline;
+}
+
+#JobDescriptions{
+    left: 56px; 
+    top: 340px; 
+}
+
+#JobRequirements{
+    left: 56px; 
+    top: 540px; 
+}
+
+#OtherTitle{
+    left: 56px; 
+    top: 740px;  
+}
+
+#Content1, #Content2, #Content3{
+    position: absolute; 
+    color: black; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    width: 700px; 
+    height: auto; 
+}

@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@400;700&family=Open+Sans&family=Oswald:wght@700&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Gamja+Flower&family=Montserrat:wght@400;700&family=Open+Sans&family=Oswald:wght@700&family=Poor+Story&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fragment+Mono&family=Gamja+Flower&family=Montserrat:wght@400;700&family=Open+Sans&family=Oswald:wght@700&family=Poor+Story&family=Ubuntu&display=swap');
+
+
+body{
+  background-image: url('/society/image/postbackground.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 5000;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+header.sticky{
+  background-color: rgba(18, 19, 18, 0.9);
+  height: 75px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+.ContainerJobImg .img1{
+  width: 100%;
+  height: 400px;
+  opacity: 0.55;
+  transition: 0.2s;
+  object-fit: cover;
+}
+
+.ContainerJobImg{
+  position: relative;
+}
+
+.ContainerJobImg .text{
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: "Open Sans";
+}
+
+.ContainerJobImg .text span{
+  color: #FFD700;
+}
+
+/**/
+.ContainerList{
+  justify-content: center;
+  margin: 0 20%;
+}
+
+.ContainerList p{
+  font-family: "Gamja Flower";
+  color: white;
+  font-size: 25px;
+}
+
+.ContainerList div{
+  margin: 0 2px;
+  width: 100%;
+}
+
+.ContainerList .List1, 
+.ContainerList .List2,
+.ContainerList .List3,
+.ContainerList .List4,
+.ContainerList .List5,
+.ContainerList .List6,
+.ContainerList .List7,
+.ContainerList .List8,
+.ContainerList .List9,
+.ContainerList .List10{
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px;
+}
+
+.ContainerList input, 
+.ContainerList button,
+.ContainerList textarea,
+.ContainerList select{
+  margin-top: 4px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  font-family: 'Ubuntu';
+}
+
+.ContainerList .List1 input,
+.ContainerList .List3 select,
+.ContainerList .List4 input,
+.ContainerList .List4 .List_4 select,
+.ContainerList .List5 input{
+  width: 98%;
+}
+
+.ContainerList .List2 input,
+.ContainerList .List6 input,
+.ContainerList .List7 input,
+.ContainerList .List8 textarea,
+.ContainerList .List9 textarea{
+  width: 99%;
+}
+
+div .select-menu,
+div .select-menu1,
+div .select-menu2,
+div .select-menu3{
+  margin: 0;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.select-menu .select-btn,
+.select-menu1 .select-btn1,
+.select-menu2 .select-btn2,
+.select-menu3 .select-btn3{
+  display: flex;
+  height: 65px;
+  background-color: white;
+  margin: 4px 0px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-menu .options,
+.select-menu1 .options1,
+.select-menu2 .options2,
+.select-menu3 .options3{
+  background-color: rgb(230, 229, 229);
+  margin-top: 6px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 29%;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  transition: 0.2s;
+}
+
+.options3{
+  height: 210px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.select-menu .options,
+.select-btn i{
+  z-index: 1;
+}
+
+.select-menu3, #Country {
+  margin-top: 5px;
+}
+
+.select-menu3 .options3{
+  width: 14.1%;
+  z-index: 2;
+}
+
+.select-btn3 i{
+  z-index: 2;
+}
+
+.select-menu1 .options1,
+.select-menu2 .options2,
+.select-btn1 i,
+.select-btn2 i{
+  z-index: 3;
+}
+
+.select-btn i,
+.select-btn1 i,
+.select-btn2 i,
+.select-btn3 i{
+  transition: 0.2s;
+}
+
+.select-menu.active .select-btn i,
+.select-menu1.active .select-btn1 i,
+.select-menu2.active .select-btn2 i,
+.select-menu3.active .select-btn3 i{
+  transform: rotate(-180deg);
+}
+
+.select-menu.active .options,
+.select-menu1.active .options1,
+.select-menu2.active .options2,
+.select-menu3.active .options3{
+  display: block;
+}
+
+.options li,
+.options1 li,
+.options2 li,
+.options3 li{
+  display: flex;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.options .option,
+.options1 .option1,
+.options2 .option2,
+.options3 .option3{
+  padding: 5px 16px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 8px;
+}
+
+.options .option:hover,
+.options1 .option1:hover,
+.options2 .option2:hover,
+.options3 .option3:hover{
+  background: #bcb5eb;
+}
+
+/*  */
+.ContainerList .List4{
+  display: flex;
+}
+
+.ContainerList .List4 .List_4{
+  display: flex;
+  margin: 0;
+  margin-right: 10px;
+}
+
+/*Label for upload image*/
+.ContainerList .List5 input{
+  display: flex;
+  align-items: center;
+  margin-top: -26%;
+  margin-bottom: 12%;
+  margin-left: 17%;
+  width: 60%;
+}
+
+.ContainerList .List5 label{
+  text-align: center;
+  display: block;
+  width: 520px;
+  height: 180px;
+  padding: 10px;
+  padding-top: 70px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Ubuntu';
+}
+
+.ContainerList .List8 textarea,
+.ContainerList .List9 textarea{
+  max-height: 250px;
+  overflow-y: scroll;
+  resize: none;
+  text-justify: inter-word;
+}
+
+.ContainerList ,.List10{
+  margin-top: 20px;
+}
+
+.ContainerList .List10 .Save{
+  display: flex;
+  justify-content: end;
+  margin-right: 13px;
+}
+
+.ContainerList .List10 .Post{
+  margin-right: 8px;
+}
+
+.ContainerList .List10 .Save input:hover{
+  background-color: greenyellow;
+}
+
+.ContainerList .List10 .Post input:hover{
+  background-color: gold;
+}
+
+/*  */
+@media only screen and (max-width: 1800px){
+  .ContainerList{
+    margin: 0 15%;
+  }
+
+  .select-menu .options,
+  .select-menu1 .options1,
+  .select-menu2 .options2{
+    width: 33.7%;
+  }
+  .select-menu3 .options3{
+    width: 16.3%;
+  }
+}
+
+@media only screen and (max-width: 1450px){
+  .ContainerList{
+    margin: 0 10%;
+  }
+
+  .ContainerJobImg .img1{
+    width: 100%;
+    height: 300px;
+    opacity: 0.55;
+    transition: 0.2s;
+    object-fit: cover;
+  }
+  
+  .select-menu .options,
+  .select-menu1 .options1,
+  .select-menu2 .options2{
+    width: 38.5%;
+  }
+  .select-menu3 .options3{
+    width: 18.4%;
+  }
+}
+
+@media only screen and (max-width: 1300px){
+  .ContainerList{
+    margin: 0 8%;
+  }
+  .ContainerJobImg .img1{
+    width: 100%;
+    height: 250px;
+    opacity: 0.55;
+    transition: 0.2s;
+    object-fit: cover;
+  }
+  .ContainerList .List4{
+    flex-direction: column;
+  }
+
+  .select-menu .options{
+    width: 82.3%;
+  }
+  .select-menu1 .options1,
+  .select-menu2 .options2,
+  .select-menu3 .options3{
+    width: 40.3%;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .ContainerList{
+    margin: 0 4%;
+  }
+
+  .ContainerList .List4{
+    flex-direction: column;
+  }
+
+  .ContainerJobImg .img1{
+    width: 100%;
+    height: 200px;
+    opacity: 0.55;
+    transition: 0.2s;
+    object-fit: cover;
+  }
+  
+  .select-menu .options{
+    width: 90.2%;
+  }
+
+
+  .select-menu1 .options1,
+  .select-menu2 .options2,
+  .select-menu3 .options3{
+    width: 44.1%;
+  }
+}

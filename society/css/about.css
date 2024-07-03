@@ -1,0 +1,369 @@
+body{
+  background-color: rgb(42, 38, 50);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+header{
+  background-color: rgba(18, 19, 18, 0.9);
+}
+
+/* Blue Background (Main) */
+.blueground{
+  margin-top: 110px;
+  width: 1163px;
+  height: 650px;
+}
+
+/* Four Main Option */
+#About, #Faq, #Policy, #Term {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+#About{
+  margin-left: 10px;
+}
+
+#Faq{
+  margin-left: 140px;
+}
+
+#Policy{
+  margin-left: 270px;
+}
+
+#Term{
+  margin-left: 400px;
+}
+
+.button{
+  width: 110px;
+  height: 90px;
+  border-radius: 20px 20px 0px 0px;
+  padding: 10px;
+  padding-bottom: 70px;
+  margin-left: 10px;
+  position: absolute;
+  border: none;
+  outline: none;
+  user-select: none;
+  transition: box-shadow 0.3s ease, outline 0.3s ease, transform 0.3s ease; /* Added transform to the transition */
+}
+
+.button:hover{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transform: translateY(-10px); /* Adjusted translateY for the hover effect */
+}
+
+.GreyShadow {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 15px 0px 0px 15px;
+  width: 47px;
+  height: 550px;
+  position: absolute;
+  left: 175px;
+  box-shadow: 4px 4px 2px;
+  margin-top: 30px;
+}
+
+.WhiteContent {
+  background: rgba(249, 249, 249);
+  border-radius: 0px 15px 15px 15px;
+  width: 1150px;
+  height: 550px;
+  position: absolute;
+  padding: 50px;
+  margin-left: 10px;
+  box-shadow: 4px 4px 2px;
+  margin-top: 30px;
+}
+
+/* Content Title */
+.Title, .SubTitle{
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+  width: 1000px;
+  height: 40px;
+}
+
+.Title {
+  font-size: 38px;
+  margin-top: -40px;
+}
+
+.SubTitle {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.TitleImage {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-top: -95px;
+  margin-left: 440px;
+}
+
+.AdminImage {
+  width: 30px;
+  height: 30px;
+}
+
+.AdminTitle {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 40px;
+  margin-top: -30px;
+}
+
+.AdminUnderline {
+  width: 90%;
+  height: 2.5px;
+  background-color: black; 
+  margin-left: -5px;
+  margin-top: -5px;
+  position: absolute;
+}
+
+
+/* Admin Section */
+/* Admin - php list out */
+.AdminContainer{
+  width: 1100px;
+  height: 75px;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: -5px;
+  margin-top: 8px;
+  padding: 5px;
+}
+
+#AdminProfile {
+  width: 29px;
+  height: 28px;
+  border: 100px;
+  background-color: gray;
+  border-radius: 100px;
+  margin-bottom: 15px;
+}
+
+#AdminName {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 46px;
+  margin-bottom: 15px;
+  margin-top: -45px;
+}
+
+/* Moderator Section */
+
+.ModeratorImage{
+  width: 30px;
+  height: 30px;
+  margin-top: 80px;
+  margin-bottom: 15px;
+}
+
+.ModeratorTitle{
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -47px;
+  margin-left: 40px;
+}
+
+/* Moderator - php list out */
+
+.ModeratorContainer{
+  width: 1095px;
+  height: 45px;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+#ModeratorProfile {
+  width: 30px;
+  height: 30px;
+  border: 100px;
+  background-color: gray;
+  border-radius: 100px;
+  margin-bottom: 15px;
+  margin-top: 3px;
+}
+
+#ModeratorName {
+  width: max-content;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 45px;
+  margin-bottom: 15px;
+  margin-top: -43px; 
+}
+
+/* FAQ */
+.FaqTitle {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.FaqImage {
+  width: 35px;
+  height: 35px;
+  margin-top: -38px;
+  margin-left: 105px;
+  position: absolute;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.FaqContent h2 {
+  text-decoration: underline;
+  margin-bottom: 1%;
+}
+
+.faq-item h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  color: #666; 
+  font-size: 16px; 
+}
+
+.GreyGround {
+  background: rgba(205, 205, 205, 0.98);
+  border-radius: 10px;
+  width: 1050px;
+  height: 400px;
+  position: absolute;
+  margin-top: 20px;
+  box-shadow: 2px 2px 20px;
+}
+
+.FaqContent{
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  padding: 25px;
+  width: 1050px;
+  height: 395px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* Private Policy */
+
+.info-list{
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+p{
+  margin-top: 10px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+h5{
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.PolicyTitle {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.PolicyImage {
+  width: 35px;
+  height: 35px;
+  margin-top: -38px;
+  margin-left: 260px;
+  position: absolute;
+}
+
+.PolicyContent{
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  padding: 25px;
+  width: 1050px;
+  height: 395px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.PolicyContent ul li{
+  margin-left: 25px;
+}
+
+/* Term of Use */
+.TermTitle {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-left: 10px; 
+}
+
+.TermImage {
+  width: 35px;
+  height: 35px;
+  margin-top: -38px;
+  margin-left: 240px;
+  position: absolute;
+}
+
+.TermContent{
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  padding: 25px;
+  width: 1050px;
+  height: 395px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 20px;
+  text-align: justify;
+}

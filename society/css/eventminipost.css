@@ -1,0 +1,146 @@
+.EventPost {
+    background: #ffffff;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #8e8e8e;
+    border-width: 2px;
+    width: 424px;
+    height: 410px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.EventPost:hover {
+    transform: translateY(-15px);
+}
+
+.EventPost:active{
+    transform: scale(0.95s);
+}
+
+.Banner2{
+    width: 424px;
+    height: 220px;
+    position: relative;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: #5e5b5b;
+    overflow: hidden;
+    z-index: 10;
+    margin-top: -200px;
+}
+  
+.Banner2 img{
+    object-fit: cover; 
+    width: 100%;
+    height: 100%; 
+}
+
+/* Book Mark */
+.EventPost .BookMark {
+    left: 385px;
+    top: 234px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#BookMarkIcon {
+    font-size: 25px;
+    color: gray;
+    transition: 0.2s;
+}
+
+#BookMarkIcon.active {
+    color: dodgerblue;
+}
+
+#EventTitle{
+    color: #5e5b5b;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    left: 10px;
+    top: 235px;
+    width: 388px;
+    height: 29px;
+}
+
+#EventContent{
+    color: #5e5b5b;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    left: 10px;
+    top: 265px;
+    width: 394px;
+    height: 65px;
+}
+
+#Date {
+    color: #5e5b5b;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 13px;
+    font-weight: 500px;
+    position: absolute;
+    left: 35px;
+    top: 330px;
+    width: 200px;
+}
+
+#Calendar {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: 328px;
+}
+
+#Location1 {
+    color: #5e5b5b;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 13px;
+    font-weight: 500px;
+    position: absolute;
+    left: 35px;
+    top: 370px;
+    width: 135px;
+    height: 18px;
+}
+
+#Location2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 9.5px;
+    top: 368px;
+}
+
+#Detail {
+    color: #5e5b5b;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 330px;
+    top: 380px;
+    width: 57px;
+    height: 23px;
+}
+
+#External {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 385px;
+    top: 379px;
+}

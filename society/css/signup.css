@@ -1,0 +1,292 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(26,27,26,255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 210vh;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 5000;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.logotitle h5{
+    font-weight: 400;
+    margin-top: -0.1px;
+}
+  
+.navigationbar ul li{
+    font-weight: 200;
+}
+
+.ContainerBox{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 1200px;
+}
+
+.cornerbox{
+    background: rgb(174,176,180);
+    border-radius: 20px 0px 0px 20px;
+    width: 40px;
+    height: 155vh;
+    position: relative;
+    right: 550px;
+}
+
+.MainBox{
+    width: 152vh;
+    height: 155vh;
+    background-color: rgb(246,246,246);
+    position: absolute;
+    border-radius: 20px 20px 20px 20px;
+    flex-basis: calc(35% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 3000px;
+    max-height: 3000px;
+}
+
+.TopBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 100px;
+    position: absolute;
+}
+
+#Gender {
+    padding: 5px 30px 5px 10px; 
+}
+
+.logo-img{
+    height: 160px;
+    width: 160px; 
+}
+
+h2{
+    font-size: 2.2em;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+h5{
+    margin-top: 15px;
+    word-spacing: 5px;
+    font-family: 'Inter-Bold', sans-serif;
+}
+
+.social-button{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social-button .icon,
+.social-button .text{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.icon img{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.GoogleButton,
+.FacebookButton{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    display: flex;
+    padding: 15px 30px;
+    background-color: rgb(222,222,222);
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 220px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.GoogleButton:hover,
+.FacebookButton:hover{
+    background-color: #93ccff;
+}
+
+
+.GoogleButton:active,
+.FacebookButton:active{
+    transform: scale(0.99);
+    box-shadow: 0px 0px 5px;
+}
+
+.line1{
+    border-bottom: 4px solid rgb(174,176,180);
+    width: 350px;
+    position: absolute;
+    margin-top: 65%;
+    margin-left: -480px;
+}
+
+.line2{
+    border-bottom: 4px solid rgb(174,176,180);
+    width: 350px;
+    position: absolute;
+    margin-top: 65%;
+    margin-right: -480px;
+}
+
+.TopBox h4{
+    display: flex;
+    margin-top: 15px;
+}
+
+
+.BottomBox{
+    width: 1050px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    bottom: 20px;
+    position: absolute;
+}
+
+.InputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    margin-top: -200px;
+}
+
+input,
+select{
+    padding: 20px;
+    padding-left: 70px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    align-items: flex-start;
+    margin: 10px;
+    width: 420px;
+    color: black;
+    border: none;
+    box-shadow: 1px 2px 5px;
+    margin-top: 20px;
+}
+
+.InputBox #email,
+.InputBox #Password{
+    width: 535px;
+    padding: 20px;
+    padding-left: 70px;
+    position: relative;
+}
+
+.InputBox #country,
+.InputBox #State{
+    width: 300px;
+    padding: 20px;
+    padding-left: 70px;
+}
+
+.InputBox #BannerTitle,
+.InputBox #ProfileTitle{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: -2.5%;
+    padding: 0%;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.password-toggle{
+    margin-left: -45px;
+    margin-top: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+
+icony{
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: -400px;
+    position: absolute;
+    display: inline-block;
+}
+
+#EmailIcon,
+#lockicon{
+    margin-top: 40px;
+    margin-left: -517px;
+    display: inline-block;
+    position: absolute;
+}
+
+#CountryIcon,
+#StateIcon{
+    margin-left: -280px;
+
+}
+
+.BottomBox input:-webkit-autofill{
+    -webkit-box-shadow: 1px 2px 5px rgb(255, 255, 255) inset; /* Set a box shadow with your desired background color */
+    transition: background-color 5000s ease-in-out 0s; /* Add a long transition to override autofill color change */
+    box-shadow: 1px 2px 5px 0px;
+}
+
+.SignUpButton{
+    background-color: rgb(224, 224, 224);
+    width: 600px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 600px;
+    position: absolute;
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.SignUpButton[type="submit"]{
+    padding-left: 5px;
+}
+
+.SignUpButton:active{
+    color: rgb(15, 14, 14);
+    background-color: rgb(152, 150, 149);
+    transform: scale(0.95);
+}

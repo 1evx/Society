@@ -1,0 +1,456 @@
+CREATE database society;
+
+CREATE TABLE addinfo (
+    infoid int primary key NOT NULL AUTO_INCREMENT,
+    title varchar(50),
+    description varchar(255)
+);
+
+CREATE TABLE category (
+    categoryid varchar(4) primary key NOT NULL, 
+    name varchar(50) not null
+);
+
+CREATE TABLE admin (
+    adminid int primary key NOT NULL AUTO_INCREMENT,
+    name varchar(50)NOT NULL,
+    password varchar(50)NOT NULL,
+    gender varchar(6)
+);
+
+CREATE TABLE profile (
+    profileid int primary key NOT NULL AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    source varchar(255) NOT NULL
+);
+
+CREATE TABLE banner (
+    bannerid int primary key NOT NULL AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    source varchar(255) NOT NULL
+);
+
+CREATE TABLE country (
+    countryid int primary key NOT NULL AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    imagesource varchar(255) NOT NULL
+);
+
+CREATE TABLE user (
+    userid int primary key NOT NULL AUTO_INCREMENT,
+    firstname varchar(50) NOT NULL,
+    lastname varchar(50) NOT NULL,
+    password varchar(50) NOT NULL,
+    gender varchar(6),
+    about varchar(255),
+    userjobtitle varchar(255),
+    userpreference varchar(255),
+    userevent varchar(255),
+    countryid int,
+    bannerid int,
+    profileid int,
+    FOREIGN KEY (countryid) REFERENCES country(countryid),
+    FOREIGN KEY (bannerid) REFERENCES banner(bannerid),
+    FOREIGN KEY (profileid) REFERENCES profile(profileid)
+);
+
+CREATE TABLE eventpost (
+    eventid int primary key NOT NULL AUTO_INCREMENT,
+    title varchar(50) NOT NULL ,
+    startdate date,
+    enddate date,
+    finishstatus boolean,
+    countryid int,
+    bannerid int,
+    userid int,
+    adminid int,
+    FOREIGN KEY (countryid) REFERENCES country(countryid),
+    FOREIGN KEY (bannerid) REFERENCES banner(bannerid),
+    FOREIGN KEY (userid) REFERENCES user(userid),
+    FOREIGN KEY (adminid) REFERENCES admin(adminid)
+);
+
+CREATE TABLE coursepost (
+    courseid int primary key NOT NULL AUTO_INCREMENT,
+    lecturername varchar(50) NOT NULL,
+    coursehour varchar(20),
+    coursetitle varchar(50),
+    coursedescription varchar(255),
+    feeindollar varchar(20),
+    videourl varchar(255),
+    finishstatus boolean,
+    categoryid varchar(4),
+    bannerid int,
+    userid int,
+    adminid int,
+    FOREIGN KEY (categoryid) REFERENCES category(categoryid),
+    FOREIGN KEY (bannerid) REFERENCES banner(bannerid),
+    FOREIGN KEY (userid) REFERENCES user(userid),
+    FOREIGN KEY (adminid) REFERENCES admin(adminid)
+);
+
+CREATE TABLE review (
+    reviewid int primary key NOT NULL AUTO_INCREMENT,
+    title varchar(50) NOT NULL,
+    comment varchar(255),
+    rate int(5),
+    userid int,
+    courseid int,
+    FOREIGN KEY (userid) REFERENCES user(userid),
+    FOREIGN KEY (courseid) REFERENCES coursepost(courseid)
+);
+
+DROP TABLE jobpost;
+
+CREATE TABLE jobpost (
+    jobid int primary key NOT NULL AUTO_INCREMENT,
+    jobtitle varchar(50) NOT NULL,
+    salaryrange varchar(20),
+    deadline date,
+    joburl varchar(255),
+    jobdescription varchar(255),
+    jobrequirement varchar(255),
+    finishstatus boolean,
+    countryid int,
+    categoryid varchar(4),
+    bannerid int,
+    profileid int,
+    userid int,
+    adminid int,
+    FOREIGN KEY (countryid) REFERENCES country(countryid),
+    FOREIGN KEY (categoryid) REFERENCES category(categoryid),
+    FOREIGN KEY (bannerid) REFERENCES banner(bannerid),
+    FOREIGN KEY (profileid) REFERENCES profile(profileid),
+    FOREIGN KEY (userid) REFERENCES user(userid),
+    FOREIGN KEY (adminid) REFERENCES admin(adminid)
+);
+
+CREATE TABLE savedjob 
+    jobid INT,
+    userid INT,
+    isPin BOOLEAN,
+    CONSTRAINT savedjob_pk PRIMARY KEY (jobid, userid),
+    CONSTRAINT fk_savedjob_jobid FOREIGN KEY (jobid) REFERENCES jobpost(jobid),
+    CONSTRAINT fk_savedjob_userid FOREIGN KEY (userid) REFERENCES user(userid)
+);
+
+CREATE TABLE savedevent (
+    eventid INT,
+    userid INT,
+    isPin BOOLEAN,
+    CONSTRAINT savedevent_pk PRIMARY KEY (eventid, userid),
+    CONSTRAINT fk_savedevent_eventid FOREIGN KEY (eventid) REFERENCES eventpost(eventid),
+    CONSTRAINT fk_savedevent_userid FOREIGN KEY (userid) REFERENCES user(userid)
+);
+
+CREATE TABLE savedcourse (
+    courseid INT,
+    userid INT,
+    isPin BOOLEAN,
+    CONSTRAINT savedcourse_pk PRIMARY KEY (courseid, userid),
+    CONSTRAINT fk_savedcourse_courseid FOREIGN KEY (courseid) REFERENCES coursepost(courseid),
+    CONSTRAINT fk_savedcourse_userid FOREIGN KEY (userid) REFERENCES user(userid)
+);
+_______________________________________________________________________________________________________________
+
+INSERT INTO `addinfo`(`title`, `description`) VALUES 
+('title1','desciption1'),
+('title2','desciption2'),
+('title3','desciption3');
+
+INSERT INTO `admin`(`name`, `password`, `gender`) VALUES 
+('name1','password1','female'),
+('name2','password2','male'),
+('name3','password3','female');
+
+INSERT INTO `banner`(`name`, `source`) VALUES 
+('banner1','image/default_banner.png');
+
+INSERT INTO `profile`(`name`, `source`) VALUES 
+('profile1','image/default_profile2.png');
+
+INSERT INTO `category`(`categoryid`, `name`) VALUES 
+('CJ01','IT Engineering'),
+('CJ02','Marketing'),
+('CJ03','Education'),
+('CS01','Craft'),
+('CS02','Coding'),
+('CS03','Productivity');
+
+INSERT INTO `country`(`name`, `imagesource`) VALUES 
+('Afghanistan', 'image/afghanistan.png'),
+('Albania', 'image/'),
+('Algeria', 'DZA'),
+('American Samoa', 'ASM'),
+('Andorra', 'AND'),
+('Angola', 'AGO'),
+('Anguilla', 'AIA'),
+('Antarctica', NULL),
+('Antigua and Barbuda', 'ATG'),
+('Argentina', 'ARG'),
+('Armenia', 'ARM'),
+('Aruba', 'ABW'),
+('Australia', 'AUS'),
+('Austria', 'AUT'),
+('Azerbaijan', 'AZE'),
+('Bahamas', 'BHS'),
+('Bahrain', 'BHR'),
+('Bangladesh', 'BGD'),
+('Barbados', 'BRB'),
+('Belarus', 'BLR'),
+('Belgium', 'BEL'),
+('Belize', 'BLZ'),
+('Benin', 'BEN'),
+('Bermuda', 'BMU'),
+('Bhutan', 'BTN'),
+('Bolivia', 'BOL'),
+('Bosnia and Herzegovina', 'BIH'),
+('Botswana', 'BWA'),
+('Bouvet Island', NULL),
+('Brazil', 'BRA'),
+('British Indian Ocean Territory', NULL),
+('Brunei Darussalam', 'BRN'),
+('Bulgaria', 'BGR'),
+('Burkina Faso', 'BFA'),
+('Burundi', 'BDI'),
+('Cambodia', 'KHM'),
+('Cameroon', 'CMR'),
+('Canada', 'CAN'),
+('Cape Verde', 'CPV'),
+('Cayman Islands', 'CYM'),
+('Central African Republic', 'CAF'),
+('Chad', 'TCD'),
+('Chile', 'CHL'),
+('China', 'CHN'),
+('Christmas Island', NULL),
+('Cocos (Keeling) Islands', NULL),
+('Colombia', 'COL'),
+('Comoros', 'COM'),
+('Congo', 'COG'),
+('Congo', 'COD'),
+('Cook Islands', 'COK'),
+('Costa Rica', 'CRI'),
+('Cote D''Ivoire', 'CIV'),
+('Croatia', 'HRV'),
+('Cuba', 'CUB'),
+('Cyprus', 'CYP'),
+('Czech Republic', 'CZE'),
+('Denmark', 'DNK'),
+('Djibouti', 'DJI'),
+('Dominica', 'DMA'),
+('Dominican Republic', 'DOM'),
+('Ecuador', 'ECU'),
+('Egypt', 'EGY'),
+('El Salvador', 'SLV'),
+('Equatorial Guinea', 'GNQ'),
+('Eritrea', 'ERI'),
+('Estonia', 'EST'),
+('Ethiopia', 'ETH'),
+('Falkland Islands (Malvinas)', 'FLK'),
+('Faroe Islands', 'FRO'),
+('Fiji', 'FJI'),
+('Finland', 'FIN'),
+('France', 'FRA'),
+('French Guiana', 'GUF'),
+('French Polynesia', 'PYF'),
+('French Southern Territories', NULL),
+('Gabon', 'GAB'),
+('Gambia', 'GMB'),
+('Georgia', 'GEO'),
+('Germany', 'DEU'),
+('Ghana', 'GHA'),
+('Gibraltar', 'GIB'),
+('Greece', 'GRC'),
+('Greenland', 'GRL'),
+('Grenada', 'GRD'),
+('Guadeloupe', 'GLP'),
+('Guam', 'GUM'),
+('Guatemala', 'GTM'),
+('Guinea', 'GIN'),
+('Guinea-Bissau', 'GNB'),
+('Guyana', 'GUY'),
+('Haiti', 'HTI'),
+('Heard Island and Mcdonald Islands', NULL),
+('Holy See (Vatican City State)', 'VAT'),
+('Honduras', 'HND'),
+('Hong Kong', 'HKG'),
+('Hungary', 'HUN'),
+('Iceland', 'ISL'),
+('India', 'IND'),
+('Indonesia', 'IDN'),
+('Iran', 'IRN'),
+('Iraq', 'IRQ'),
+('Ireland', 'IRL'),
+('Israel', 'ISR'),
+('Italy', 'ITA'),
+('Jamaica', 'JAM'),
+('Japan', 'JPN'),
+('Jordan', 'JOR'),
+('Kazakhstan', 'KAZ'),
+('Kenya', 'KEN'),
+('Kiribati', 'KIR'),
+('Korea', 'PRK'),
+('Korea', 'KOR'),
+('Kuwait', 'KWT'),
+('Kyrgyzstan', 'KGZ'),
+('Lao People''s Democratic Republic', 'LAO'),
+('Latvia', 'LVA'),
+('Lebanon', 'LBN'),
+('Lesotho', 'LSO'),
+('Liberia', 'LBR'),
+('Libyan Arab Jamahiriya', 'LBY'),
+('Liechtenstein', 'LIE'),
+('Lithuania', 'LTU'),
+('Luxembourg', 'LUX'),
+('Macao', 'MAC'),
+('Macedonia', 'MKD'),
+('Madagascar', 'MDG'),
+('Malawi', 'MWI'),
+('Malaysia', 'image/malaysia.png'),
+('Maldives', 'MDV'),
+('Mali', 'MLI'),
+('Malta', 'MLT'),
+('Marshall Islands', 'MHL'),
+('Martinique', 'MTQ'),
+('Mauritania', 'MRT'),
+('Mauritius', 'MUS'),
+('Mayotte', NULL),
+('Mexico', 'MEX'),
+('Micronesia', 'FSM'),
+('Moldova', 'MDA'),
+('Monaco', 'MCO'),
+('Mongolia', 'MNG'),
+('Montserrat', 'MSR'),
+('Morocco', 'MAR'),
+('Mozambique', 'MOZ'),
+('Myanmar', 'MMR'),
+('Namibia', 'NAM'),
+('Nauru', 'NRU'),
+('Nepal', 'NPL'),
+('Netherlands', 'NLD'),
+('Netherlands Antilles', 'ANT'),
+('New Caledonia', 'NCL'),
+('New Zealand', 'NZL'),
+('Nicaragua', 'NIC'),
+('Niger', 'NER'),
+('Nigeria', 'NGA'),
+('Niue', 'NIU'),
+('Norfolk Island', 'NFK'),
+('Northern Mariana Islands', 'MNP'),
+('Norway', 'NOR'),
+('Oman', 'OMN'),
+('Pakistan', 'PAK'),
+('Palau', 'PLW'),
+('Palestinian Territory, Occupied', NULL),
+('Panama', 'PAN'),
+('Papua New Guinea', 'PNG'),
+('Paraguay', 'PRY'),
+('Peru', 'PER'),
+('Philippines', 'PHL'),
+('Pitcairn', 'PCN'),
+('Poland', 'POL'),
+('Portugal', 'PRT'),
+('Puerto Rico', 'PRI'),
+('Qatar', 'QAT'),
+('Reunion', 'REU'),
+('Romania', 'ROM'),
+('Russian Federation', 'RUS'),
+('Rwanda', 'RWA'),
+('Saint Helena', 'SHN'),
+('Saint Kitts and Nevis', 'KNA'),
+('Saint Lucia', 'LCA'),
+('Saint Pierre and Miquelon', 'SPM'),
+('Saint Vincent and the Grenadines', 'VCT'),
+('Samoa', 'WSM'),
+('San Marino', 'SMR'),
+('Sao Tome and Principe', 'STP'),
+('Saudi Arabia', 'SAU'),
+('Senegal', 'SEN'),
+('Serbia and Montenegro', NULL),
+('Seychelles', 'SYC'),
+('Sierra Leone', 'SLE'),
+('Singapore', 'SGP'),
+('Slovakia', 'SVK'),
+('Slovenia', 'SVN'),
+('Solomon Islands', 'SLB'),
+('Somalia', 'SOM'),
+('South Africa', 'ZAF'),
+('South Georgia and the South Sandwich Islands', NULL),
+('Spain', 'ESP'),
+('Sri Lanka', 'LKA'),
+('Sudan', 'SDN'),
+('Suriname', 'SUR'),
+('Svalbard and Jan Mayen', 'SJM'),
+('Swaziland', 'SWZ'),
+('Sweden', 'SWE'),
+('Switzerland', 'CHE'),
+('Syrian Arab Republic', 'SYR'),
+('Taiwan', 'TWN'),
+('TAJIKISTAN', 'Tajikistan'),
+('Tanzania', 'TZA'),
+('Thailand', 'THA'),
+('Timor-Leste', NULL),
+('Togo', 'TGO'),
+('Tokelau', 'TKL'),
+('Tonga', 'TON'),
+('Trinidad and Tobago', 'TTO'),
+('Tunisia', 'TUN'),
+('Turkey', 'TUR'),
+('Turkmenistan', 'TKM'),
+('Turks and Caicos Islands', 'TCA'),
+('Tuvalu', 'TUV'),
+('Uganda', 'UGA'),
+('Ukraine', 'UKR'),
+('United Arab Emirates', 'ARE'),
+('United Kingdom', 'GBR'),
+('United States', 'USA'),
+('United States Minor Outlying Islands', NULL),
+('Uruguay', 'URY'),
+('Uzbekistan', 'UZB'),
+('Vanuatu', 'VUT'),
+('Venezuela', 'VEN'),
+('Viet Nam', 'VNM'),
+('Virgin Islands, British', 'VGB'),
+('Virgin Islands, U.s.', 'VIR'),
+('Wallis and Futuna', 'WLF'),
+('Western Sahara', 'ESH'),
+('Yemen', 'YEM'),
+('Zambia', 'ZMB'),
+('Zimbabwe', 'ZWE');
+
+INSERT INTO `user`
+(`firstname`, `lastname`, `password`, `gender`, `about`, `userjobtitle`, `userpreference`, `userevent`, `countryid`, `bannerid`, `profileid`)
+VALUES 
+('John', 'Doe', 'password123', 'male', 'I love programming and hiking.', 'Software Engineer', 'Web Development', 'Tech Conferences', '1', '1', '1'),
+('Jane', 'Smith', 'pass456', 'female', 'Passionate about data science and AI.', 'Data Scientist', 'Data Science', 'Tech Meetups', '2', '1', '1'),
+('Alex', 'Johnson', 'secure789', 'male', 'Graphic designer with a love for art.', 'Graphic Designer', 'Graphic Design', 'Art Exhibitions', '3', '1', '1');
+
+INSERT INTO `coursepost`
+(`lecturername`, `coursehour`, `coursetitle`, `coursedescription`, `feeindollar`, `videourl`, `finishstatus`, `categoryid`, `bannerid`, `userid`, `adminid`)
+VALUES 
+('Dr. Smith', '20 hours', 'Introduction to Programming', 'Learn the basics of programming in this comprehensive course.', 'free', 'https://example.com/intro-programming', '1', 'CS02', '1', '1', '1'),
+('Prof. Johnson', '30 hours', 'Data Science Fundamentals', 'Explore the world of data science with hands-on projects and examples.', 'free', 'https://example.com/data-science-fundamentals', '1', 'CS01', '1', '2', '2'),
+('Ms. Davis', '25 hours', 'Graphic Design Mastery', 'Unlock your creativity and become a skilled graphic designer.', 'free', 'https://example.com/graphic-design-mastery', '1', 'CS02', '1', '3', '3');
+
+INSERT INTO `eventpost`
+(`title`, `startdate`, `enddate`, `finishstatus`, `countryid`, `bannerid`, `userid`, `adminid`)
+VALUES 
+('Web Development Workshop', '2023-05-15', '2023-05-17', '1', '1', '1', '1', '1'),
+('Data Science Conference', '2023-06-10', '2023-06-12', '1', '2', '1', '1', '2'),
+('Artificial Intelligence Summit', '2023-07-20', '2023-07-22', '1', '3', '1', '1', '3');
+
+
+INSERT INTO `jobpost`
+(`jobtitle`, `salaryrange`, `deadline`, `joburl`, `jobdescription`, `jobrequirement`, `finishstatus`, `countryid`, `categoryid`, `bannerid`, `profileid`, `userid`, `adminid`)
+VALUES 
+('Software Engineer', '$10,000 - $20,000', '2023-05-31', 'https://example.com/job1', 'Exciting opportunity for a skilled software engineer.', 'Bachelor\'s degree in Computer Science, 3+ years of experience', '1', '1', 'CJ01', '1', '1', '1', '1'),
+('Data Analyst', '$50,000 - $70,000', '2023-06-15', 'https://example.com/job2', 'Join our data analytics team and make an impact.', 'Degree in Statistics or related field, proficiency in SQL', '1', '2', 'CJ01', '1', '1', '2', '2'),
+('Marketing Specialist', '$45,000 - $60,000', '2023-07-01', 'https://example.com/job3', 'Seeking a creative mind to lead marketing campaigns.', 'Marketing degree, experience in digital marketing', '1', '3', 'CJ02', '1', '1', '1', '3');
+
+INSERT INTO `review`(`title`, `comment`, `rate`, `userid`, `courseid`)
+VALUES 
+('Great Course!', 'I really enjoyed this course. The content was well-organized, and the instructor was excellent.', '5', '1', '1'),
+('Could be Better', 'The course material was good, but I expected more depth in certain topics. Overall, it was an okay experience.', '3', '2', '1'),
+('Highly Recommended', 'This course exceeded my expectations. The hands-on exercises were very helpful, and I learned a lot.', '5', '3', '2');
+
+

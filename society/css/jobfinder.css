@@ -1,0 +1,695 @@
+::-webkit-scrollbar{
+    width: 10px;
+    /* background-color: #cc3b6b; */
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(105, 103, 103); 
+}
+
+@keyframes floater {
+    0%{transform: translateY(-7%);transition: ease 0.5s;}
+    50%{transform: translateY(7%);transition: ease 0.5s;}
+  }
+@keyframes floater1 {
+    0%{transform: translateY(-3%);transition: ease 0.5s;}
+    50%{transform: translateY(3%);transition: ease 0.5s;}
+}
+@keyframes floater2 {
+    0%{transform: translateY(-5%);transition: ease 0.5s;}
+    50%{transform: translateY(5%);transition: ease 0.5s;}
+}
+
+body {
+    height: 100%;
+    width: 100%; /* Use width: 100% to take up the full width of the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 5000;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+header.sticky{
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 75px;
+}
+
+.Mcontainer {
+    width: fit-content;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.Mcontainer, .Banner, .Banner2, .Blackground, .Footer, .FooterContent{
+    display: block;/*align horizontal*/
+    margin-left: auto;/*align horizontal*/
+    margin-right: auto;/*align horizontal*/
+}
+
+@media (max-width: 1920px) {
+    .Mcontainer{
+        width: 100%;
+    }
+}
+
+/* Advertisement Banner */
+.Banner{
+    width: 100%;
+    height: 720px;  
+    background: #151515;
+    position: relative;
+    z-index: 1;
+}
+
+
+.BannerContent p{
+    width: 600px;
+    margin-top: 50px;
+}
+.Banner img{
+    object-fit: contain;
+}
+
+.bannerimg{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    z-index: 2;
+}
+
+.bannerimg1,
+.bannerimg2,
+.bannerimg3,
+.bannerimg4{
+    display: flex;
+    width: 100%;
+    mix-blend-mode: luminosity;
+}
+
+.bannerbackgound{
+    display: flex;
+    justify-content: end;
+    margin: 0 10%;
+}
+
+#Job1{
+    width: 295px; 
+    height: 395px; 
+    margin-left: 850px;
+    border-radius: 50px;
+    margin-top: -35px;
+}
+
+#Job2{
+    width: 295px; 
+    height: 380px; 
+    margin-left: 1255px;
+    border-radius: 0px 0px 30px 30px;
+    margin-top: -365px;
+}
+
+#Job3{
+    width: 295px; 
+    height: 389px;
+    margin-left: 850px;
+}
+
+#Job4{
+    width: 295px; 
+    height: 443px;    
+    margin-top: -400px;
+    margin-left: 1240px;
+    position: absolute;
+}
+
+
+.Banner h1{
+    left: 170px; 
+    top: 180px; 
+    position: absolute; 
+    color: white; 
+    font-size: 70px; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.Banner p{
+    left: 170px; 
+    top: 350px; 
+    position: absolute; 
+    color: #FFF4F4; 
+    font-size: 25px; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    line-height: 45px;
+    z-index: 2;
+}
+
+.Circle1{
+    width: 70px; 
+    height: 70px; 
+    left: 650px; 
+    top: 150px; 
+    position: absolute; 
+    background: #75FF5F; 
+    border-radius: 1000px;
+    z-index: 1;
+    transform: translateY(-5%);
+    animation: floater1 4s infinite;
+    transition: ease-in-out 2s;
+}
+
+.Circle2{
+    width: 120px; 
+    height: 120px; 
+    left: 1150px; 
+    top: 380px; 
+    position: absolute; 
+    background: #EFCA44; 
+    border-radius: 1000px;
+    z-index: 3;
+    transform: translateY(-5%);
+    animation: floater2 3s infinite;
+    transition: ease-in-out 2s;
+}
+
+.Circle3{
+    width: 80px; 
+    height: 80px; 
+    left: 550px; 
+    top: 600px; 
+    position: absolute; 
+    background: #75FF5F; 
+    border-radius: 1000px;
+    z-index: 1;
+    transform: translateY(-5%);
+    animation: floater 5s infinite;
+    transition: ease-in-out 2s;
+}
+
+.Rect1{
+    width: 74px; 
+    height: 70px; 
+    left: 90px; 
+    top: 100px; 
+    position: absolute; 
+    background: #EFCA44; 
+    border-radius: 10px;
+    z-index: 1;
+    transform: translateY(-7%);
+    animation: floater 6s infinite;
+    transition: ease-in-out 0.5s;
+}
+
+.Rect2{
+    width: 116px; 
+    height: 87px; 
+    left: -15px; 
+    top: 500px; 
+    position: absolute; 
+    background: #75FF5F; 
+    border-radius: 10px;
+    z-index: 1;
+}
+.Rect3{
+    width: 116px; 
+    height: 87px; 
+    left: 200px; 
+    top: 570px; 
+    position: absolute; 
+    background: #EFCA44; 
+    border-radius: 10px;
+    z-index: 1;
+    transform: scale(0.95);
+    animation: pulsate 1s infinite alternate;
+    transition: ease 0.5s;
+}
+@keyframes pulsate {
+    to {
+        transform: scale(1.05); /* Scale up */
+    }
+}
+
+/* Find Job And Create Job Section - Banner2 */
+.Banner2{
+    width: 100%;
+    height: 670px;
+    position: relative;
+    z-index: 3;
+}
+
+#DesiredJob{
+    width: 60%; 
+    height: 672px; 
+    object-fit: cover;
+}
+
+#HireStar{
+    width: 60%; 
+    height: 672px;
+    /* left: 663px;  */
+    left: calc(100% - 60%);
+    top: 0;
+    object-fit: cover;
+    position: absolute;
+}
+
+.Banner2Content{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: absolute;
+    top: 250px;
+}
+.Banner2Content1,
+.Banner2Content2{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+#FindYourDesiredJob,
+#HireYourStarEmployee{
+    width: 447px; 
+    height: 160px;
+    margin: 15px;
+}
+
+#FindJob{
+    width: 242px; 
+    height: 88px; 
+    background: linear-gradient(180deg, #FFDA57 0%, #FFC060 100%); 
+    border-radius: 20px;
+    color: black; 
+    font-size: 26px;
+    font-family: Inter; 
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#Hire{
+    width: 242px; 
+    height: 88px; 
+    background: linear-gradient(180deg, #5AFF57 0%, #00FF94 100%); 
+    border-radius: 20px;
+    color: black; 
+    font-size: 26px;
+    font-family: Inter; 
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+#FindJob:hover,
+#Hire:hover{
+    letter-spacing: 1px;
+}
+
+/* Background Section */
+.Blackground{
+    width: 100%; 
+    height: 2630px; 
+    position: relative; 
+    background: #040404;
+}
+
+/* Search Bar For Job Section */
+.SearchBar{
+    width: 100%; 
+    height: auto;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+
+    /* display: flex;
+    justify-content: center; */
+}
+/* Country Search Bar */
+#CountrySelect{
+    width: 223px; 
+    height: 66px; 
+    position: absolute; 
+    background: white; 
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px; 
+    border: 2px #8E8E8E solid;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#CountrySelect[name="Country"] {
+    color: black;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 20px; 
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: left; /* Center text within the options */
+}
+
+/* Country Search bar */
+#CountryImage{
+    width: 43px; 
+    height: 43px; 
+    margin-left: 8px;
+    margin-top: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+#CountryName{
+    color: black;
+    width: 100px;
+    padding: 10px;
+    left: 100px; 
+    font-size: 21px; 
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Job Search bar */
+#JobForm{
+    width: 524px; 
+    height: 66px; 
+    background: white; 
+    border: 2px #8E8E8E solid;
+}
+
+#SearchImage{
+    width: 38px; 
+    height: 38px; 
+    position: absolute;
+    margin: 10px;
+}
+
+#SearchSelect{
+    width: 400px; 
+    height: 30px; 
+    margin-left: 65px; 
+    margin-top: 15px; 
+    color: rgba(0, 0, 0, 0.51); 
+    font-size: 20px; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    border: none;
+}
+
+/* Category Search Bar */
+#CategorySelect{
+    width: 238px; 
+    height: 66px; 
+    background: white; 
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+    border: 2px #8E8E8E solid;
+    cursor: pointer;
+}
+
+#CategorySelect[name = 'Category']{
+    padding-left: 50px;
+    color: black; 
+    font-size: 21px; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+}
+
+#CategoryImage{
+    width: 38px; 
+    height: 38px;
+    margin: 10px; 
+    position: absolute;
+    z-index: 1;
+}
+
+/* Sorted by Search Bar - Total Job Display */
+.SearchContent{
+    width: 100%;
+    height: 930px;
+    display: flex;
+    margin: 100px 6%;
+}
+
+.SearchBar2{
+    width: 80%; 
+    height: 55px; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.TotalJob{
+    width: 124px; 
+    height: 50px; 
+    background: white; 
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    border: 2px #8E8E8E solid;
+}
+
+.TotalJob p{
+   margin-top: 14px;
+   padding: 0;
+   text-align: center;
+   color: black; 
+   font-size: 18px; 
+   font-family: 'Roboto', sans-serif;  
+   font-weight: 400;
+}
+
+/* Sort by category */
+.SortedBy{
+    width: 140px; 
+    height: 50px; 
+    background: white; 
+    border-bottom-right-radius: 15px; 
+    border-top-right-radius: 15px; 
+    border: 2px #8E8E8E solid;
+    display: flex;
+}
+
+.SortedBy p{ 
+    margin: 14px;
+    color: #6C6666; 
+    font-size: 18px; 
+    font-family: 'Roboto', sans-serif;   
+    font-weight: 400;
+    position: absolute;
+}
+
+#SortCategory{
+    width: 160px; 
+    height: 49px; 
+    color: black; 
+    font-size: 18px;
+    margin-top: -1px;
+    margin-left: 80px;
+    border: 2px #8E8E8E solid;
+    border-left: none;
+    background: white; 
+    border-bottom-right-radius: 15px; 
+    border-top-right-radius: 15px; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+#
+/* Job Post Mini Menu - jobminipost.css, jobminipost.php */
+
+.IframeContainer1{
+    max-height: 850px; 
+    width: 540px;
+    border: none;
+    display: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+/* Job Post Main Menu - jobmainpost.css, jobmainpost.php */
+.SearchContent2{
+    width: 60%;
+}
+
+.IframeContainer2{
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+    margin-left: 2%;
+}
+
+/* Plus */
+.SearchBar2button{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+}
+#Rect3{
+    width: 77px; 
+    height: 80px; 
+    background: white; 
+    border-radius: 14px; 
+    border: 1px #8E8E8E solid;
+    z-index: 2;
+}
+
+#Plus{
+    width: 38px; 
+    height: 41px; 
+}
+
+.Footer {
+    top: 90px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: 2;
+}
+
+.Footer .footerimg{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.FooterContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-top: 18%;
+}
+
+/* Main Content Control Footer */
+.Content1{
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 8% 10px 8%;
+}
+
+.Content1 p{
+    margin: 20px; /*Word-Spacing*/
+}
+
+.Content2{
+    margin: 5px 10%;
+    display: flex;
+    flex-direction: column;
+}
+    
+.Content3{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Content3 a{
+    text-decoration: none;
+}
+
+.Footer h1{
+    color: white; 
+    font-size: 30px; 
+    font-family: Roboto; 
+    font-weight: bold; 
+    text-align: center;
+}
+
+.Footer h1 a{
+    text-decoration: none;
+}
+
+#Line1{
+    width: 150px; /*Size of the line*/
+    border: 2px solid white;
+    margin: 0;
+    margin-left: 25px;
+    border-radius: 30px;
+}
+
+#JFFooter, #SSFooter, #EFooter, #AboutUs{
+    width: 200px; /*Size of the word*/
+    margin-top: 20px;
+}
+
+.Footer p, #TextLink{
+    color: white; 
+    font-size: 25px; 
+    font-family: Roboto;
+    font-weight: 400px;
+    text-align: center;
+}
+
+/* 4 Logo Images */
+#Twitter, #Facebook, #Insta, #Youtube{
+    width: 70px; 
+    height: 70px;
+    margin-left: 45px;
+    margin-right: -45px;
+}
+
+.Content4{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer Slogan */
+#FooterSlogan{
+    width: 380px;  
+    text-align: center; 
+    color: white; 
+    font-size: 36px; 
+    font-family: Roboto; 
+    font-weight: bold; 
+    line-height: 45px;
+}
+
+#Line2 {
+    width: 100%; /*Size of the line*/
+    margin-top: 20px;
+    height: 1px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color:white;
+}
+
+#TermsOfUse, #PrivacyPolicy{ 
+    color: white; 
+    font-size: 25px; 
+    font-family: Roboto; 
+    font-weight: 400;
+    width: 200px;
+    font-weight: bold;
+    margin-top: 10px;
+}

@@ -1,0 +1,180 @@
+::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  body{
+    background-image: none;
+  }
+  
+  .logotitle h1 a{
+    color: black;
+  }
+  
+  .navigationbar nav ul li a{
+    color: black;
+  }
+  
+  .ContainerPostreviewImg .img1{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border: black 5px solid;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .ContainerReview{
+    margin: 0 20%;
+  }
+  .ContainerJobReview{
+    justify-content: space-between;
+    display: flex;
+  }
+  .ContainerJobReview .ContainerJobReview-1,
+  .ContainerJobReview .ContainerJobReview-2,
+  .ContainerJobReview .Profilelist-1,
+  .ContainerJobReview .Profilelist-1 .icon1,
+  .ContainerJobReview .Profilelist-1 .icon2,
+  .ContainerJobReview .Profilelist-1 .icon3{
+    display: flex;
+  }
+  
+  .ContainerJobReview .Profilelist-1 .icon1,
+  .ContainerJobReview .Profilelist-1 .icon2,
+  .ContainerJobReview .Profilelist-1 .icon3{
+    margin: 0;
+  }
+  
+  .ContainerJobReview .ContainerJobReview-1 .Bio .time{
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .ContainerJobReview .ContainerProfileList div,
+  .ContainerJobReview .ContainerJobReview-2 div{
+    margin: 5px 5px;
+  }
+  .ContainerJobReview .ContainerProfileList h1{
+    margin-bottom: 10px;
+  }
+  
+  .ContainerJobReview-2 button{
+    padding: 7px 5px;
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .ContainerJobReview-2 i{
+    margin-top: 7px;
+    font-size: 26px;
+    transition: 0.2s;
+  }
+  
+  .ContainerJobReview-2.active i{
+    color: rgb(218, 36, 36);
+  }
+  
+  .ContainerJobReview-2 .Applybutton{
+    background-color: #88FD5F;
+    font-weight: bold;
+  }
+  .ContainerJobReview-2  .Savebutton{
+    background-color: #D3D3D3;
+    font-weight: bold;
+  }
+  
+  .Profile{
+    width: 140px;
+    height: 140px;
+    margin-top: -60px;
+    border-radius: 50%;
+    border: black 3px solid;
+    background-color: rgb(243, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Profile img{
+    width: 120px;
+    height: 120px;
+    margin-top: 6px;
+    border: black 2px solid;
+    border-radius: 50%;
+  }
+  
+  
+  /*  */
+  
+  @media only screen and (max-width: 1900px){
+    .ContainerPostreviewImg .img1{
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  
+  @media only screen and (max-width: 1650px){
+    .ContainerPostreviewImg .img1{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .ContainerReview{
+      margin: 0 12%;
+    }
+  }
+  
+  @media only screen and (max-width: 1150px){
+    .ContainerPostreviewImg .img1{
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .ContainerReview{
+      margin: 0 10%;
+    }
+  }
+  
+  @media only screen and (max-width: 900px){
+    .ContainerPostreviewImg .img1{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .ContainerReview{
+      margin: 0 7%;
+    }
+  
+    .Profile{
+      width: 120px;
+      height: 120px;
+    }
+    
+    .Profile img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px){
+    .ContainerPostreviewImg .img1{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .ContainerReview{
+      margin: 0 3%;
+    }
+  
+    .Profile{
+      width: 100px;
+      height: 100px;
+    }
+    
+    .Profile img{
+      width: 80px;
+      height: 80px;
+    }
+  }

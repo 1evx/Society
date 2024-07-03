@@ -1,0 +1,243 @@
+body {
+  background: linear-gradient(
+    135.43deg,
+    rgba(138, 135, 212, 1) 0%,
+    rgba(115, 103, 240, 1) 41.0590261220932%,
+    rgba(115, 103, 240, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  position: relative; 
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 5000;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+header.sticky{
+  background-color: rgba(18, 19, 18, 0.9);
+  height: 75px;
+}
+
+/* Container */
+.container{
+  display:flex;
+  margin: auto;
+  margin-top: 6%;
+  height: 87vh;
+  width: 70vw;
+  box-shadow: 4px 4px 10px;
+  margin-bottom: 6%;
+}
+
+.logo{
+  margin: 20px auto 25% 95px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; 
+  height: auto; 
+  display: flex;
+  margin-left: 18%;
+}
+
+.logo-text {
+  font-size: 14px;
+  display: flex;
+  margin-bottom: auto;
+  margin-top: 12%; 
+  margin-left: 4%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.white_box{
+  background-color: #f3ecece5;
+  flex: 0.5;
+  border: 1.5px solid black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Option Bar */
+.main-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -15%;
+}
+
+.n-content{
+  text-decoration: none;
+  color: black;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.n-content i {
+  height: 100%;
+  margin-right: 10%; /*Space with icon and word*/
+  margin-left: 9%;/*Anchor for center*/
+}
+
+.n-content:hover{
+  background-color: greenyellow;
+}
+
+.log-out{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  margin-top: 6.5%;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  width: 14.15%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px 60px;
+}
+
+.log-out:hover{
+  background-color:red;
+}
+
+/* Post */
+.light_box{
+  background-color:rgba(240, 242, 244, 0.581);
+  flex: 2;
+  border: 1.5px solid black;  
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.border1, .border2{
+  border: 1px solid black;
+  height: 40vh;
+  width: 55vw;
+  border-radius:15px ;
+  border-width: 2px;
+  text-align: center;
+  margin: auto;
+  margin-top: 4.5%;
+  background: #f8f4f4c2;
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+  padding-top: 1%;
+}
+
+.border2{
+  margin-top: 0;
+  margin-bottom: 4.5%;
+}
+
+.line {
+  border:1px solid black;
+  margin-top: 1%;
+}
+
+.inside-border-1{
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.B1{
+  border: 2px solid black;
+  width: 15vw;
+  height: 25vh;
+  border-radius: 15px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.inside-border-2{
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.B1::after{
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+  margin: auto;
+  margin-top: 45%;
+}
+
+
+.B1:hover{
+  transition: transform 0.3s ease; 
+  transform: scale(1.10);
+}
+
+/* B1 Content */
+.banner{
+  width: 100%;
+  height: 110px;
+  background-color: gray;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+
+.banner img{
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+  margin-left: -50%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.content{
+  width: 100%;
+  height: 40%;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#companyname, #jobtitle{
+  font-size: 14px;
+  text-align: left;
+  margin-left: 5px;
+  width: 215px;
+}
+
+#companyname{
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+#jobtitle{
+  font-size: 13px;
+  margin-top: 3px;
+  height: 40px;
+}

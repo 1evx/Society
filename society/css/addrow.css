@@ -1,0 +1,245 @@
+body {
+    background: linear-gradient(
+      135.43deg,
+      rgba(138, 135, 212, 1) 0%,
+      rgba(115, 103, 240, 1) 41.0590261220932%,
+      rgba(115, 103, 240, 1) 100%
+    );
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    position: relative; 
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .leftheader{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+  }
+  
+  header h1{
+    width: 100px;
+    font-size: 20px;
+  }
+  
+  .logotitle{
+    margin-left: 5px;
+  }
+  
+  .logotitle h1 a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logoimg{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .rightheader{
+    height: 100%;
+    display: flex;
+    padding: 0 2%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navigationbar{
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
+  }
+  
+  .navigationbar nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .navigationbar nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+  }
+  
+  .navigationbar nav ul li a:hover{
+    color: rgb(122, 121, 121);
+  }
+  
+  .rightheader .Notification .button1, 
+  .rightheader .RegisterButton .button2{
+    border-radius: 50%;
+    margin: 2px;
+    padding: 8px 10px;
+    background-color: white;
+    border: black 2px solid;
+    transition:  0.2s;
+    cursor: pointer;
+  }
+  
+  .rightheader .Notification .button1:hover, 
+  .rightheader .RegisterButton .button2:hover{
+    color: white;
+    background-color: rgb(82, 79, 79);
+  } 
+  
+  /* Container */
+  .container{
+    display:flex;
+    margin: auto;
+    margin-top: 5.5px;
+    height: 87vh;
+    width: 70vw;
+    box-shadow: 4px 4px 10px;
+    margin-bottom: 3%;
+  }
+  
+  .logo{
+    margin: 20px auto 25% 95px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; 
+    height: auto; 
+    display: flex;
+    margin-left: 18%;
+  }
+  
+  .logo-text {
+    font-size: 14px;
+    display: flex;
+    margin-bottom: auto;
+    margin-top: 12%; 
+    margin-left: 4%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .white_box{
+    background-color: #f3ecece5;
+    flex: 0.5;
+    border: 1.5px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  /* Option Bar */
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -15%;
+  }
+  
+  .n-content{
+    text-decoration: none;
+    color: black;
+    font-family: "Inter-Regular", sans-serif;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 20px 20px;
+  }
+  
+  .n-content i {
+    height: 100%;
+    margin-right: 10%; /*Space with icon and word*/
+    margin-left: 9%;/*Anchor for center*/
+  }
+  
+  .n-content:hover{
+    background-color: greenyellow;
+  }
+  
+  .log-out{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    margin-top: 6.5%;
+    font-family: "Inter-Regular", sans-serif;
+    font-weight: 400;
+    width: 14.15%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px 60px;
+  }
+  
+  .log-out:hover{
+    background-color:red;
+  }
+  
+  /* Post */
+  .light_box{
+    background-color:rgba(240, 242, 244, 0.581);
+    flex: 2;
+    border: 1.5px solid black;  
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .border1{
+    border: 1px solid black;
+    height: 80vh;
+    width: 52vw;
+    border-radius:15px ;
+    border-width: 2px;
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    background: #f8f4f4c2;
+    font-family: "Inter-Bold", sans-serif;
+    font-weight: 700;
+    padding-top: 1%;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  
+  .line {
+    border:1px solid black;
+    margin-top: 1%;
+  }
+  
+  .inside-border-1{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+ .inside-border-1 form {
+    display: table-column;
+    justify-content: space-between; 
+  }
+
+    .inside-border-1 input{
+        width: 100%;
+    }
+
+  .inside-border-1 input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }

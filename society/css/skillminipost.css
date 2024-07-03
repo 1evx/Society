@@ -1,0 +1,151 @@
+/* SkillPost */
+.SkillPost {
+  background: #ffffff;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #333333;
+  border-width: 2px;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.SkillPost:hover{
+  transform: translateY(-15px);
+}
+
+.Banner2 #BannerImage{
+  width: 100%;
+  background-image: cover;
+  height: 178px;
+  margin-top: -230px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+/* Book Mark */
+.SkillPost .BookMark {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#BookMarkIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: gray;
+  transition: 0.2s;
+}
+
+#BookMarkIcon.active {
+  color: dodgerblue;
+}
+
+#Time {
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 260px;
+  top: 300px;
+  width: 70px;
+  height: 19px;
+}
+
+#Rate {
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 20px;
+  top: 262px;
+}
+
+#Price {
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 20px;
+  top: 290px;
+}
+
+#Total {
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 165px;
+  top: 262px;
+  width: 57px;
+  height: 19px;
+}
+
+#LecturerName {
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 20px;
+  top: 190px;
+  width: 118px;
+  height: 19px;
+}
+
+#CourseName{
+  color: #5e5b5b;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  left: 20px;
+  top: 215px;
+  width: 300px;
+  height: 53px;
+}
+
+#Container1 {
+  position: absolute;
+  inset: 0;
+}
+
+#Star1, #Star2, #Star3, #Star4, #Star5{
+  width: 21.8px;
+  height: 21.8px;
+  position: absolute;
+  top: 258px;
+} 
+
+#Star1 {
+  left: 47px;
+}
+
+#Star2 {
+  left: 68.8px;
+}
+
+#Star3 {
+  left: 90.6px;
+}
+
+#Star4 {
+  left: 112.4px;
+}
+
+#Star5 {
+  left: 134.2px;
+}
